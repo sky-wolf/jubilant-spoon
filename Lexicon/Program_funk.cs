@@ -185,7 +185,7 @@ namespace Lexicon
             double log2 = Math.Log2(tal);
             double log10 = Math.Log10(tal);
 
-            var result = Tuple.Create(log2, log10, roten);
+            var result = Tuple.Create(roten, log2, log10);
             return result;
         }
 
@@ -214,10 +214,11 @@ namespace Lexicon
 
         public void arraysorting()
         {
+            Console.WriteLine("Skappar två arrayer en med slumpmässiga tal");
             Random random = new Random();
 
             int ran = 0;
-            int len = 10;
+            int len = 25;
             int[] etts = new int[len];
             int[] tvas = new int[len];
 
@@ -230,12 +231,12 @@ namespace Lexicon
                 etts[i] = ran;
             }
 
-            //for (int i = 0; i < etts.Length; i++)
-            //{
-            //    Console.Write(etts[i] + "  ");
-            //}
-            //Console.Write("\n");
-
+            for (int i = 0; i < etts.Length; i++)
+            {
+                Console.Write(etts[i] + "  ");
+            }
+            Console.Write("\n");
+            Console.WriteLine("Den andra är den första soterad stigande");
             int racknare = 0;
             for( int i=0; i < 101; i++)
                 for (int j = 0; j < len; j++)
@@ -249,11 +250,11 @@ namespace Lexicon
                 }
 
 
-            //for (int i = 0; i < tvas.Length; i++)
-            //{
-            //    Console.Write(tvas[i] + "  ");
-            //}
-            //Console.Write("\n");
+            for (int i = 0; i < tvas.Length; i++)
+            {
+                Console.Write(tvas[i] + "  ");
+            }
+            Console.Write("\n");
 
         }
 

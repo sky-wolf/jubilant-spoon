@@ -40,6 +40,7 @@
                 {
                     case 0:
                         {
+                            Console.Clear();
                             Console.WriteLine("Hej då");
                             break;
                         }
